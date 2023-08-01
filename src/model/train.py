@@ -7,6 +7,7 @@ import os
 import pandas as pd
 
 import numpy as np
+import mlflow
 
 from sklearn.linear_model import LogisticRegression
 
