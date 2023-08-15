@@ -5,6 +5,7 @@ on: [pull_request]
 jobs:
   job1:
     name: pull request job
+    runs-on: ubuntu-latest
     steps:
     - name: Placeholder
       run: |
