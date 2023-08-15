@@ -4,9 +4,31 @@ on: [pull_request]
 
 jobs:
   job1:
+    name: linting
     runs-on: ubuntu-latest
-    name: pull request job
     steps:
-    - name: Placeholder
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Use Python version 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+    - name: Install Flake8
       run: |
-        echo "Will add code checks here in next challenge test change again"
+        python -m pip install flake8
+    - name: Run linting tests
+      run: | 
+        flake8 src/model/
+  job2:
+    name: Unit test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Use Python version 3.8
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.8'
+    - name: Run pytest
+      run: |
+        pytest tests/
