@@ -4,6 +4,8 @@ on: [pull_request]
 
 jobs:
   job1:
+    name: pull request job
+    steps:
     - name: Placeholder
       run: |
         echo "Will add code checks here in next challenge"
