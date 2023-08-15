@@ -6,8 +6,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     name: pull request job
-    runs-on: ubuntu-latest
     steps:
     - name: Placeholder
       run: |
-        echo "Will add code checks here in next challenge test change"
+        echo "Will add code checks here in next challenge test change again"
