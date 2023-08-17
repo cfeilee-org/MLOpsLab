@@ -61,4 +61,4 @@ jobs:
       - name: Create endpoint
         run: az ml online-endpoint create --name lcf-diabetes-endpoint -f src/create-endpoint.yml --workspace-name MLOpsLab --resource-group MLOpsLab
       - name: Deploy
-        run: az ml oonline-deployment create --name mlflow-deployment --endpoint lcf-diabetes-endpoint -f src/mlflow-deployment.yml --all-traffic --workspace-name MLOpsLab --resource-group MLOpsLab     
+        run: az ml online-deployment create --name mlflow-deployment --endpoint lcf-diabetes-endpoint -f src/mlflow-deployment.yml --all-traffic --workspace-name MLOpsLab --resource-group MLOpsLab     
